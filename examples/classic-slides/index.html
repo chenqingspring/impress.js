@@ -77,7 +77,7 @@
     automatically moves to next slide. It can also be set individually for each
     slide, but here we just set a common duration for all slides.
 -->
-<div id="impress" data-transition-duration="1000" data-autoplay="10">
+<div id="impress" data-transition-duration="1000" data-autoplay="100000">
 
     <!--
         Each step of the presentation should be an element inside the `#impress` with a class name
@@ -102,68 +102,51 @@
         your cooler impress.js presentations.
     -->
     <div class="step slide title" data-x="-1000" data-y="-1500">
-        <h1>Example Presentation: <br />
-            Classic Slides</h1>
-        <h2>Henrik Ingo</h2>
-        <h3>2015</h3>
+        <h1>日播盒子技术架构分析</h1>
+        <h2>陈卿</h2>
+        <h3>2018.03.11</h3>
 
         <div class="notes">
-        Any element with the class="notes" will not be displayed. This can
-        be used for speaker notes. In fact, the impressConsole plugin will
-        show it in the speaker console!
         </div>
     </div>
 
     <div class="step slide" data-rel-x="1000" data-rel-y="0">
-        <h1>Table of Contents</h1>
+        <h1>摘要</h1>
         <ul>
-            <li><a href="#step-1">A title slide</a></li>
-            <li><a href="#step-2">Table of Contents</a></li>
-            <li><a href="#step-3">Text slide</a></li>
-            <li><a href="#step-4">Bullet points</a></li>
-            <li><a href="#step-5">Blockquote &amp; image</a></li>
-            <li><a href="#step-6">More basic text styles</a></li>
-            <li><a href="#step-7">Motion effects 101</a></li>
-            <li><a href="#addons">Add-ons</a></li>
-            <li><a href="#moreinfo">More info</a></li>
+            <li><a href="#step-1">技术人员眼中的Stitch Fix模式</a></li>
+            <li><a href="#step-2">在Stitch Fix模式中，技术和算法起到什么作用？</a></li>
+            <li><a href="#step-3">日播盒子的技术架构</a></li>
+            <li><a href="#step-4">技术栈选择</a></li>
+            <li><a href="#step-5">技术团队规模和人员配备</a></li>
         </ul>
-
-        <div class="notes">
-           <p>Table of Contents, with links to other slides of this same presentation.</p>
-         
-           <p>Note that instead of absolute positioning we use relative positioning,
-           with the data-rel-x and data-rel-y attributes. This means the step is
-           positioned relative to the foregoing step. In other words, this is 
-           equivalent to data-x="0" data-y="-1500".</p>
-        </div>
     </div>
 
     <div class="step slide">
-        <h1>A slide with text</h1>
-        <p>This slide has a few paragraphs <br />(p element) of normal text.</p>
-        <p>Personally I like centered or even justified text, as it looks less boring. This can of course be set in <a href="css/classic-slides.css">the css file</a>.</p>
-        <p>I really like the style on links in these presentations. I modified the border to be beveled, but it's mostly from <a href="http://impress.github.io/impress.js/">@bartaz' original demo</a>. <a href="https://twitter.com/bartaz">@bartaz</a> is the creator of impress.js.</p>
-
+        <h2>技术人员眼中的Stitch Fix模式</h2>
+        <ul>
+        <li>新零售模式，线上/线下购物之外，一种新的选择</li>
+        <li class="substep">不仅是构建一个电商系统</li>
+        <li class="substep">基于数据科学的智能推荐系统
+            <ul>
+                <li class="substep">亚马逊的商品购买有35%来自推荐系统</li>
+                <li class="substep">领英的用户相互关注有50%来自推荐系统</li>
+                <li class="substep">Netflix的视频观看有75%来自推荐系统</li>
+                <li class="substep">Stitch Fix的服装购买100%来自推荐系统</li>
+            </ul>
+        </li>
+        <li class="substep">基于数据和算法的库存管理系统</li>
+        <li class="substep">基于数据和算法的服装设计</li>
+        </ul>
         <div class="notes">
-         In this slide, we don't even specify the relative position, rather
-         that too is inherited. So this slide will again be 1000px to the
-         right of the previous one.
         </div>
     </div>
 
-    <div class="step slide">
-        <h1>Bullet points</h1>
-        <ul>
-            <li>A slide with bullet points. This is the first point.</li>
-            <li>Second point</li>
-            <li>Third point. Under this point we also have some sub-bullets:
-                <ul>
-                    <li>Sub-bullet 1</li>
-                    <li>Sub-bullet 2</li>
-                </ul>
-            </li>
-        </ul>
-
+    <div class="step slide center">
+        <h2>在Stitch Fix模式中 </br> 技术和算法起到什么作用？</h1>            
+        </br>
+        <p class="substep">客户填写资料  -  寄送5件衣物  -  客户为选择付款</p>
+        </br>
+        <img class="substep" src="https://images-cdn.shimo.im/i3ae4KdfOWAN9Bkz/Screen_Shot_2018_03_12_at_9.10.51_AM.png!thumbnail" width="200px">
         <div class="notes">
         </div>
     </div>
@@ -175,250 +158,320 @@
         element should be rotated by 30 degrees clockwise.        
     -->
     <div class="step slide" data-rel-x="1100" data-rel-y="300" data-rotate="30">
-        <h1>A blockquote &amp; image</h1>
-        <img src="images/3476636111_c551295ca4_b.jpg" 
-             alt="Mother Teresa holding a newborn baby" 
-             class="right"/>
-        <blockquote>
-        Spread love everywhere you go. <br />Let no one ever come to you without leaving happier.
-        <p style="text-align: right">Mother Teresa</p>
-        <p class="left bottom"><small>Image credit: <a href="https://www.flickr.com/photos/peta-de-aztlan/3476636111/">Peta_de_Aztlan</a>@Flickr. CC-BY 2.0</small></p>
-        </blockquote>
-
+        <h2>客户填写个人资料</h2>
+        </br>
+        </br>
+        <img src="https://d3743oz439ic4i.cloudfront.net/assets/home/service-info/women/1-introduce-yourself-f9826e4ddc933911e04c7ed2ef90ac4ae6099641a524ca1cc6158baa96b72fb0.svg" 
+        class="right" width="200px">
+        <p>根据客户填写的个人资料和需求 </br> <strong>自动生成</strong>一个预约发货订单</p>
         <div class="notes">
         </div>
     </div>
 
-    <div class="step slide" data-rel-x="800" data-rel-y="800" data-rotate="60">
-        <h1>More text styles</h1>
-        <p>As usual, use <em>em</em> to emphasize, <br />
-           <strong>strong</strong> for strong, <u>u</u> for underline,<br />
-           <strike>strike</strike> for strikethrough and <q>q for inline quotations</q>.</p>
-           
-        <p>If you're a software engineer like me, you will often use the 
-           <code>&lt;code&gt;</code> tag for monospaced inline text.</p>
-
+    <div class="step slide center" data-rel-x="1100" data-rel-y="300" data-rotate="60">
+        <h2>分配库存</h2>
+        <p>根据用户<strong>收货地点</strong>仓库<strong>库存匹配</strong>情况，计算出货仓库</p>
+        <img class="substep" src="https://images-cdn.shimo.im/MdARPJRQmQYLzaAK/Screen_Shot_2018_03_10_at_11.05.34_AM.png!thumbnail" 
+        height="400px">
         <div class="notes">
         </div>
     </div>
 
-    <div class="step slide" data-rel-x="300" data-rel-y="1100" data-rotate="90">
-        <h1>Motion effects 101</h1>
-        <p>Items on the slide can</p>
-        <p class="fly-in fly-out">Fly in</p>
-        <p class="fade-in fade-out" style="transition-delay: 2s">Fade in</p>
-        <p class="zoom-in zoom-out" style="transition-delay: 4s">And zoom in</p>
-        
-        <p class="left bottom"><small>...just like in PowerPoint. Yeah, I know I'm being lame, but it was fun to learn to do this in CSS3.</small></p>
-
+    <div class="step slide center" data-rel-x="1100" data-rel-y="300" data-rotate="90">
+        <h2>选衣服</h2>
+        <p>第一步：用不同的<strong>智能算法</strong>对衣物按不同纬度排序</p>
+        <img class="substep" src="https://images-cdn.shimo.im/BSNSvg0SAD80mwg7/Screen_Shot_2018_03_10_at_11.06.44_AM.png!thumbnail" 
+        height="400px">
         <div class="notes">
-        <p>This step here doesn't introduce anything new when it comes to data attributes, but you
-        should notice in the demo that some words of this text are being animated.
-        It's a very basic CSS transition that is applied to the elements when this step element is
-        reached.
-        </p><p>
-        At the very beginning of the presentation all step elements are given the class of `future`.
-        It means that they haven't been visited yet.
-        </p><p>        
-        When the presentation moves to given step `future` is changed to `present` class name.
-        That's how animation on this step works - text moves when the step has `present` class.
-        </p><p>
-        Finally when the step is left the `present` class is removed from the element and `past`
-        class is added.
-        </p><p>
-        So basically every step element has one of three classes: `future`, `present` and `past`.
-        Only one current step has the `present` class.
-        </p>
         </div>
     </div>
 
-    <div id="addons" class="step slide title" data-rel-x="-300" data-rel-y="1100" data-rotate="120">
-        <h2>Add-ons</h2>
+    <div class="step slide center" data-rel-x="1100" data-rel-y="300" data-rotate="120">
+        <p>第二步：从列表中去除推荐过的衣物</p>
+        <img class="substep" src="https://images-cdn.shimo.im/4YnWdYJ1is4IQjr3/Screen_Shot_2018_03_10_at_11.07.19_AM.png!thumbnail" 
+        height="400px">
         <div class="notes">
-        <p>This version of impress.js includes several add-ons, striving to make this a
-           full featured presentation app.</p>
         </div>
     </div>
 
-    <div class="step slide" data-rel-x="-800" data-rel-y="800" data-rotate="150" data-autoplay="3">
-        <h1>Impress.js plugins</h1>
+    <div class="step slide center" data-rel-x="1100" data-rel-y="300" data-rotate="150">
+        <p>第三步：通过协同过滤算法选择</p>            
+        <img class="substep" src="./images/z-recommendation.png" 
+        width="800px">
+        <div class="notes">
+        </div>
+    </div>
+
+    <div class="step slide center" data-rel-x="1100" data-rel-y="300" data-rotate="180">
+        <p>第四步：当属性明确时，用混合效果模型进行选择</p>            
+        <img class="substep" src="https://images-cdn.shimo.im/hgKEIxNyplkhDKWq/Screen_Shot_2018_03_10_at_11.09.26_AM.png!thumbnail" 
+        height="400px">
+        <div class="notes">
+        </div>
+    </div>
+
+    <div class="step slide center" data-rel-x="1100" data-rel-y="300" data-rotate="210">
+        <p>第五步：当属性不明确时，根据反馈和购买历史<strong>推测</strong></p>
+        </br>
+        <img class="substep" src="./images/latent-size.png" widht="800px">
+        <div class="notes">
+        </div>
+    </div>
+
+    <div class="step slide center" data-rel-x="1100" data-rel-y="300" data-rotate="240">
+        <p>第六步：根据反馈文本做<strong>语义分析</strong>，以完善个人资料</p>
+        <img class="substep" src="https://images-cdn.shimo.im/LQnSt3mAarIyBCai/Screen_Shot_2018_03_10_at_11.10.35_AM.png!thumbnail" widht="800px">
+        <div class="notes">
+        </div>
+    </div>
+
+    <div class="step slide center" data-rel-x="1100" data-rel-y="300" data-rotate="270">
+        <p>第七步：根据Pinterest的关注或者提交的图片 </br>  做<strong>图像识别和分析</strong>，以完善个人资料</p>
+        <img class="substep" src="https://images-cdn.shimo.im/KbOVysmHlxcDDBCl/Screen_Shot_2018_03_10_at_11.19.18_AM.png!thumbnail" height="300px">
+        <div class="notes">
+        </div>
+    </div>
+
+    <div class="step slide center" data-rel-x="1100" data-rel-y="300" data-rotate="300">
+        <p>第八步：所有以上的算法，只是为了给衣服<strong>打分</strong>  </br>为理型师选取衣服做参考</p>
+        <img class="substep" src="https://images-cdn.shimo.im/NihSCivAaawk0MK3/Screen_Shot_2018_03_11_at_4.08.45_PM.png!thumbnail" height="300px">
+        <div class="notes">
+        </div>
+    </div>
+
+
+    <div class="step slide" data-rel-x="1100" data-rel-y="300" data-rotate="330">
+        <h2>利用算法给用户分配适合的理型师</h2>
+        </br>
+        <img src="https://images-cdn.shimo.im/caLdcgsAgAQHSHgS/Screen_Shot_2018_03_11_at_4.16.06_PM.png!thumbnail" 
+        height="240px" class="right">
         <ul>
-        <li>A new <a href="https://github.com/impress/impress.js/blob/master/src/plugins/README.md">plugin framework</a> allows for rich extensibility,
-            without bloating the core rendering library.
-            <ul>
-            <li class="substep">Press 'P' to open a presenter console.</li>
-            <li class="substep">When you move the mouse, navigation controls are visible on your bottom left</li>
-            <li class="substep">Autoplay makes the slides advance after a timeout</li>
-            <li class="substep">Relative positioning plugin is often a more convenient way to position your slides when editing. (<a href="https://github.com/impress/impress.js/blob/master/examples/classic-slides/index.html">See html for this presentation.</a>)</li>
-            </ul>
-        </li>
+            <li>等待时间</li>
+            <li>客户的关系</li>
+            <li>风格和客户是否契合</li>
         </ul>
         <div class="notes">
-        <p>This presentation also uses speaker notes. They are not visible in the presentation, but shown in the impress console.</p>
-        
-        <p>If you pressed P only now, this is the first time you see these notes. In fact, there has been notes on preceding slides as well.
-           You can use the navigation controls at the bottom of the impress console to browse back to them.</p>
-
-        <p>And did you notice how those bullet points appear one by one as you press space/arrow? That's another plugin, called substeps.</p>
         </div>
     </div>
 
-    <div class="step slide" data-rel-x="-1100" data-rel-y="300" data-rotate="180">
-        <h1>Highlight.js</h1>
-        <pre><code>
-        // `init` API function that initializes (and runs) the presentation.
-        var init = function () {
-            if (initialized) { return; }
-            execPreInitPlugins();
-            
-            // First we set up the viewport for mobile devices.
-            // For some reason iPad goes nuts when it is not done properly.
-            var meta = $("meta[name='viewport']") || document.createElement("meta");
-            meta.content = "width=device-width, minimum-scale=1, maximum-scale=1, user-scalable=no";
-            if (meta.parentNode !== document.head) {
-                meta.name = 'viewport';
-                document.head.appendChild(meta);
-            }        
-        </code></pre>
-        <div class="notes">
-        <p>The Highlight.js library provides really nice color coding of source code.
-           It automatically applies to any code inside a &lt;pre&gt;&lt;code&gt; element.</p>
-        <p>Highlight.js is found under the <a href="https://github.com/impress/impress.js/tree/master/extras">extras/</a>
-           directory, since it is an independent third party plugin, not really an impress.js plugin. You have
-           to include it via it's own &lt;link&gt; and &lt;script&gt; tags.</p>
-        </div>
-    </div>
-
-    <div class="step slide" data-rel-x="-1100" data-rel-y="-300" data-rotate="210">
-        <h1>Mermaid.js</h1>
-        <div class="mermaid">
-        %% This is a comment in mermaid markup
-        graph LR
-          A(Support for<br />diagrams)
-          B[Provided by<br />mermaid.js]
-          C{Already<br />know<br />mermaid?}
-          D(<a href=&quot;http://knsv.github.io/mermaid/index.html#usage&quot;>Tutorial</a>)
-          E(Great, hope you enjoy!)
-          A-->B
-          B-->C
-          C--No-->D
-          C--Yes-->E
-          classDef startEnd fill:#fcc,stroke:#353,stroke-width:2px;
-          class A,D,E startEnd;
-        </div>
-
-        <h1><a href="http://docs.mathjax.org/en/latest/start.html">MathJax.js</a></h1>
-        <p>Use \(\LaTeX\), MathML or AsciiMath to properly show mathematical formula.</p>
-        <div class="notes">
-          Mermaid.js, likewise in a href="https://github.com/impress/impress.js/tree/master/extras">extras/</a>
-           directory, draws SVG diagrams from a MarkDown-like syntax. To learn
-          more about it <a href="http://knsv.github.io/mermaid/index.html#usage">read the fine manual</a>.
-        </div>
-    </div>
-
-    <div id="markdown" class="step slide markdown" data-rel-x="-800" data-rel-y="-800" data-rotate="240">
-# Markdown.js
-        
-* [Markdown.js](https://github.com/evilstreak/markdown-js) integration: for authors in a hurry!
-  * ...or lazy ;-)
-* Jot down bullet points in *Markdown*
-  * ...have it automatically converted to HTML
-  * Markdown is converted into a presentation client side, in the browser. This is unlike
-   existing tools like [Hovercraft](https://github.com/regebro/hovercraft) and 
-   [markdown-impress](http://binbinliao.com/markdown-impress/) where you generate a new
-   html file on the command line.
-* [A more advanced Markdown presentation is here.](../markdown/)
-    </div>
-
-    <div id="acme" class="step slide" data-rel-x="-300" data-rel-y="-1100" data-rotate="270">
+    <div class="step slide" data-rel-x="1100" data-rel-y="300" data-rotate="360">
+        <h2>理型师亲手为客户挑选5件衣服</h2>
+        </br>
+        <img src="https://images-cdn.shimo.im/fPPmDYsAUskyMETE/Screen_Shot_2018_03_10_at_11.14.20_AM.png!thumbnail" 
+        height="220px" class="right">
         <ul>
-        <li>Remember, in <em>impress.js</em> the full power of HTML5, CSS3 &amp; JavaScript is always at your fingertips!</li>
-        <li>For example, you can use tables, forms, or dynamic charts as you would on any web page:</li>
+            <li>算法学习理型师怎么做决定</li>
+            <li>帮助理型师更快做决定</li>
         </ul>
-        <h2>Acme Inc Quarterly Profits</h2>
-
-        <!-- Improvised bar graph of divs, to avoid copying something like NVD3 into the repo. -->
-        <div id="acme-graph">
-            <div id="acme-graph-bars">
-                <div id="acme-graph-q1"></div>
-                <div id="acme-graph-q2"></div>
-                <div id="acme-graph-q3"></div>
-                <div id="acme-graph-q4"></div>
-            </div>
-            <div id="acme-graph-bottom"></div>
-        </div>
-
-        <table border="1">
-        <tr><td>Q1</td><td id="acme-q1">234€</td></tr>
-        <tr><td>Q2</td><td id="acme-q2">255€</td></tr>
-        <tr><td>Q3</td><td><input id="acme-q3" size="5" oninput="acmeDrawGraph();" />€ <small>(insert here)</small></td></tr>
-        <tr><td>Q4</td><td><input id="acme-q4" size="5" oninput="acmeDrawGraph();" />€</td></tr>
-        </table>
         <div class="notes">
         </div>
     </div>
-    <script type="text/javascript">
-        var acmeDrawGraph = function() {
-            var profits = {};
-            
-            // Q1-Q2: get innerHTML, remove €
-            var value = document.getElementById('acme-q1').innerHTML;
-            if( value[value.length-1] == "€" ) value = value.substring(0, value.length-1);
-            profits['q1'] = value;
-            var value = document.getElementById('acme-q2').innerHTML;
-            if( value[value.length-1] == "€" ) value = value.substring(0, value.length-1);
-            profits['q2'] = value;
-            
-            // Q3-Q4: get input.value
-            profits['q3'] = document.getElementById('acme-q3').value;
-            profits['q4'] = document.getElementById('acme-q4').value;
 
-            // Convert all to numeric value, and remember max value for scaling purposes.
-            var max = profits['q1'];
-            for ( var q in profits ) {
-                profits[q] = isNaN(profits[q]) ? 0 : Number(profits[q]);
-                if( profits[q] > max ) {
-                    max = profits[q];
-                }
-            }
-            
-            // Draw the bar graph
-            for ( var q in profits ) {
-                var h = 200 * profits[q] / max;
-                var div = document.getElementById('acme-graph-'+q);
-                div.style = 'height: ' + h + 'px';
-            }
-        };
-        // This draws the first 2 bars during page load
-        acmeDrawGraph();
-    </script>
-
-    <!--
-        This step also sets a custom data-transition-duration. All of the above steps used the value set
-        in the root div#impress element, but it is also allowed to set it for each step. Since transitioning
-        to this step will rotate twice around it's axis, we give the transition a bit more time here.
-    -->
-    <div id="moreinfo" class="step slide" data-x="2020" data-y="700" data-rotate="720" data-transition-duration="2000">
-        <h1>More info</h1>
+    <div class="step slide" data-rel-x="1100" data-rel-y="300" data-rotate="390">
+        <h2>用户试衣服并填写反馈</h2>
+        </br>
         <ul>
-        <li><a href="https://github.com/impress/impress.js/blob/master/DOCUMENTATION.md">DOCUMENTATION.md</a> is the API reference.
-        </li>
-        <li><a href="https://github.com/impress/impress.js/blob/master/examples/classic-slides/index.html">Source of this presentation itself</a> is commented</li>
-        <li><a href="http://impress.github.io/impress.js/">Advanced Impress.js demo</a> by <a href="http://twitter.com/bartaz">@bartaz</a>
-            <ul>
-            <li>Again, the <a href="http://github.com/impress/impress.js/blob/master/index.html">html</a> 
-                and <a href="https://github.com/impress/impress.js/blob/master/css/impress-demo.css">css</a> source is well commented.</li>
-            </ul>
-        </li>
-        <li>More examples and demos:
-            <ul>
-            <li><a href="https://github.com/impress/impress.js/tree/master/examples">examples/</a> in this repository</li>
-            <li><a href="https://github.com/impress/impress.js/wiki/Examples-and-demos">on the impress.js wiki</a></li>
-            </ul>
-        </li>
-        <li>Check out <a href="https://github.com/impress/impressionist">Impressionist</a>: a 3D GUI to create impress.js presentations</li>
+            <li>通过一次次反馈，记录客户的 <strong>变化</strong></li>
+            <li class="substep">用马尔可夫模型来 <strong>预测</strong> 客户未来的可能需求</li>
         </ul>
+        <div class="notes">
+        </div>
+    </div>
 
+    <div class="step slide center" data-rel-x="1100" data-rel-y="300" data-rotate="420">
+        <h2>根据数据预测库存</h2>
+        <img src="https://images-cdn.shimo.im/xEYuov0Op2IXnvp5/Screen_Shot_2018_03_11_at_4.30.30_PM.png!thumbnail" 
+        width="600px">
+        <div class="notes">
+        </div>
+    </div>
+
+    <div class="step slide" data-rel-x="1100" data-rel-y="300" data-rotate="450">
+        <h2>基于数据和算法的服饰设计</h2>
+        </br>
+        <img src="https://images-cdn.shimo.im/XGiRcOz6r3YkZY3O/Screen_Shot_2018_03_10_at_11.04.06_AM.png!thumbnail" 
+        height="220px" class="right">
+        <ul>
+            <li class="substep">每个样式点作为『基因』</li>
+            <li class="substep">所有的衣服的所有样式点，构成一个基因集合</li>
+            <li class="substep">重新组合得分高的基因，加入突变基因</li>
+            <li class="substep">设计师可以从中精炼出适合的服装组合</li>
+        </ul>
+        <div class="notes">
+        </div>
+    </div>
+
+
+    <div class="step slide center">
+        <h2>日播盒子的技术架构</h1>            
+        </br>
+        <p class="substep"> <strong>电话联系会员用户</strong>  -  挑选5件衣服  -  客户为选择付款</p>
+        </br>
+        <img class="substep" src="images/ribo-group.png" width="300px">
+        <div class="notes">
+        </div>
+    </div>
+
+
+    <div class="step slide" data-rel-x="1100" data-rel-y="300" data-rotate="30">
+        <h2>数据录入(后台)</h2>
+        </br>
+        <ul>
+            <li>创建产品库</li>
+            <li>录入服装元素向量 (clothing vector)</li>
+            <li>会员数据的导入，及编辑更新</li>
+        </ul>
+        <img src="https://images-cdn.shimo.im/wmCS39uvmTsC7QtY/Screen_Shot_2018_03_10_at_11.16.39_AM.png!thumbnail" 
+        width="800px">
+        <div class="notes">
+        </div>
+    </div>
+
+    <div class="step slide" data-rel-x="1100" data-rel-y="300" data-rotate="60">
+        <h2>理型师选择衣服(后台)</h2>
+        </br>
+        <ul>
+            <li>查看会员信息</li>
+            <li>查看初步匹配到的衣服</li>
+            <li>为用户选择5件衣服，填写搭配建议</li>
+            <li>打印仓库派送单 和 盒子订单 (包含支付二维码)</li>
+        </ul>
+        </br>
+        <div class="notes">
+        </div>
+    </div>
+
+    <div class="step slide" data-rel-x="1100" data-rel-y="300" data-rotate="90">
+        <h2>仓管更新订单(后台)</h2>
+        </br>
+        <ul>
+            <li>填写订单派送快递单号和返回单号</li>
+            <li>收到寄回衣服，更新订单状态</li>
+        </ul>
+        </br>
+        <div class="notes">
+        </div>
+    </div>
+    <div class="step slide" data-rel-x="1100" data-rel-y="300" data-rotate="120">
+        <h2>用户客户端(小程序)</h2>
+        </br>
+        <img src="http://cx.mjiashop.com/statics/cx/pc/upload/weChat_small_program/banner.png" 
+        width="500px" class="right">
+        <ul>
+            <li>用户扫码支付</li>
+            <li>查看订单内容</li>
+            <li>填写反馈</li>
+            <li>修改个人信息</li>
+        </ul>
+        </br>
+        <div class="notes">
+        </div>
+    </div>
+
+    <div class="step slide" data-rel-x="1100" data-rel-y="300" data-rotate="150">
+        <h2>算法</h2>
+        </br>
+        <ul>
+            <li>根据现有的会员数据，通过数据算法分析优质会员</li>
+            <li>创建产品库以及服装元素向量 (clothing vector)</li>
+            <li>研发产品各种排序算法</li>
+            <li>研发产品匹配算法</li>
+        </ul>
+        </br>
+        <div class="notes">
+        </div>
+    </div>
+
+    <div class="step slide center" data-rel-x="1100" data-rel-y="300" data-rotate="180">
+        <h2>系统架构</h2>
+        <img src="https://images-cdn.shimo.im/Kg9RFxQcHoENmv01/Screen_Shot_2018_03_10_at_8.52.12_AM.png!thumbnail" 
+        width="700px">
+        <div class="notes">
+        </div>
+    </div>
+
+    <div class="step slide" data-rel-x="1100" data-rel-y="300" data-rotate="210">
+        <h2>整个技术栈采用微服务架构</h2>
+        </br>
+        <img src="http://microservices.io/i/PatternsRelatedToMicroservices.jpg" 
+        width="400px" class="right">
+        </br>
+        <ul>
+            <li>系统易于更新维护</li>
+            <li>满足技术多样性</li>
+        </ul>
+        </br>
+        <div class="notes">
+        </div>
+    </div>
+
+    <div class="step slide" data-rel-x="1100" data-rel-y="300" data-rotate="240">
+        <h2>用户前端使用微信小程序</h2>
+        </br>
+        <img src="https://mp.weixin.qq.com/debug/wxadoc/dev/image/quickstart/basic/first-program.png" 
+        width="400px" class="right">
+        <ul>
+            <li>跨平台，无需按照APP</li>
+            <li>方便在微信生态内推广</li>
+        </ul>
+        </br>
+        <div class="notes">
+        </div>
+    </div>
+
+<div class="step slide" data-rel-x="1100" data-rel-y="300" data-rotate="270">
+        <h2>用户服务器端 </br> Ruby on Rails + Restful API</h2>
+        </br>
+        </br>
+        <img src="http://rubyonrails.org/images/rails-logo.svg" 
+        width="300px" class="right">
+        <ul>
+            <li>高效开发，快速迭代</li>
+            <li>硅谷创业首选框架</li>          
+        </ul>
+        </br>
+        <div class="notes">
+        </div>
+    </div>
+
+   <div class="step slide" data-rel-x="1100" data-rel-y="300" data-rotate="300">
+        <h2>后台前端使用React </br> 蚂蚁金服的Ant Design</h2>
+        </br>
+        <img src="./images/antd-pro.png" width="400px" class="right" />
+        <ul>
+            <li>组件化框架开发</li>
+            <li>易于维护和扩展</li>
+            <li>UI界面美观，标准化</li>
+        </ul>
+        </br>
+        
+        <div class="notes">
+        </div>
+    </div>
+
+    <div class="step slide" data-rel-x="1100" data-rel-y="300" data-rotate="330">
+        <h2>后台服务器端/算法实现 </br> Ruby on Rails / Java / nodejs</h2>
+        </br>
+        <ul>
+            <li>Stitch Fix开源项目中大量实用Ruby，有可以借鉴的工具</li>
+            <li>在需要性能支持的服务中，可以使用Java，保证性能要求</li>
+        </ul>
+        </br>
+        <div class="notes">
+        </div>
+    </div>
+
+    <div class="step slide" data-rel-x="1100" data-rel-y="300" data-rotate="360">
+        <h2>技术团队规模和人员配备</h2>
+        </br>
+        <img src="./images/team.jpg" width="400px" class="right" />
+        <ul>
+            <li>两个月完成初期功能</li>
+            <li>两位高级ruby工程师</li>
+            <li>一位高级算法工程师</li>
+            <li>两位高级前端工程师</li>
+        </ul>
+        </br>
         <div class="notes">
         </div>
     </div>
